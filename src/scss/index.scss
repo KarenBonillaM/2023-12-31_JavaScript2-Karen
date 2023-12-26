@@ -1,0 +1,118 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background-color: $body-bg;
+}
+
+.logo {
+  width: 120px;
+  border-radius: $circle;
+}
+
+.logo-nav {
+  width: 80px;
+}
+
+.card-signUp {
+  background-color: $tertiary;
+}
+
+.nav-list ul {
+  margin-bottom: 0px;
+}
+
+.nav-list-item {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.search-form {
+  position: relative;
+}
+
+.magnifying-glass {
+  position: absolute;
+  right: 15px;
+  align-self: center;
+}
+
+.btn {
+  background-color: $btn-g;
+}
+
+.post-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.fa-solid {
+  font-size: 1.5rem;
+}
+
+.post {
+  text-decoration: none;
+}
+
+.post p {
+  text-align: left;
+}
+
+.post-title {
+  text-transform: uppercase;
+}
+
+.img-profile {
+  border-radius: $circle;
+}
+
+.main-img {
+  width: 300px;
+  max-height: 300px;
+}
+
+.bg-profile {
+  background: center / cover no-repeat url(/images/bg-profile.jpg);
+}
+
+.card-follow {
+  background-color: $btn-g;
+}
+
+.quote-container {
+  background-color: $tertiary;
+}
+
+.card-form {
+  background-color: white;
+}
+
+.form-control {
+  background-color: white;
+}
+
+.invalid-feedback {
+  display: none;
+}
+
+input:invalid + .invalid-feedback {
+  display: block;
+}
+
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.postImg {
+  max-height: 450px;
+  width: 700px;
+}
+
+.input-feedback {
+  color: #686666;
+  font-size: 0.8em;
+}
+
