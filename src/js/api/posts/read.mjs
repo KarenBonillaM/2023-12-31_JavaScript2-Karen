@@ -13,7 +13,7 @@ export async function getPosts() {
   const allPosts = [];
 
   try{
-    while(totalPosts < 1600) {
+    while(totalPosts < 150) {
       const updatePostURL = `${API_SOCIAL_URL}${action}?_author=true&_sort=created&_sortOrder=desc&_limit=${limit}&_offset=${offset}`;
 
     const response = await authFetch(updatePostURL);
@@ -63,7 +63,7 @@ export async function displayOnlyRelativePosts() {
 displayOnlyRelativePosts()
 
 
-function createPostHTML(postData) {
+export function createPostHTML(postData) {
 
   const postLink = document.createElement("a");
   postLink.setAttribute("href", `/post/index.html?id=${postData.id}`);
@@ -170,6 +170,8 @@ if(postData) {
 }
 
 async function createPostsHTML() {
+  postsContainer.innerHTML = "";
+
   const relativePosts = await displayOnlyRelativePosts()
 
   for(let i = 0; i < relativePosts.length; i++) {
