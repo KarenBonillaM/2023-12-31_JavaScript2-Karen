@@ -7,8 +7,6 @@ const postsContainerPostsUser = document.querySelector(".postsUserContainer")
       const post = document.querySelectorAll(".post")
       const postTitle = postsContainerPostsUser.getElementsByTagName("h2");
     
-    
-    
       for(let i = 0; i < postTitle.length; i++) {
         let match = post[i].getElementsByTagName("h2")[0];
     
