@@ -58,6 +58,7 @@ body {
 
 .post p {
   text-align: left;
+  padding-left: 45px;
 }
 
 .post-title {
@@ -93,6 +94,16 @@ body {
   background-color: white;
 }
 
+.form-floating {
+  position: inherit;
+}
+
+.form-floating label {
+  position: inherit;
+  padding-bottom: 0px;
+  font-weight: bold;
+}
+
 .invalid-feedback {
   display: none;
 }
@@ -116,3 +127,50 @@ input:invalid + .invalid-feedback {
   font-size: 0.8em;
 }
 
+#posts-container {
+  margin: auto;
+}
+
+
+#update-avatar-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+#update-avatar-container span {
+  font-size: 5em;
+  font-weight: bolder;
+  position: absolute;
+  top: 0;
+  right: 100px;
+  z-index: 100;
+  color: white;
+  cursor: pointer;
+}
+
+#update-avatar-container label {
+  font-size: 2em;
+  color: white;
+}
+
+#update-avatar-container input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.popup-image-avatar {
+  max-width: 260px;
+  border-radius: 130%;
+}
+
+.popup-avatar {
+  padding-right: 10px;
+}
