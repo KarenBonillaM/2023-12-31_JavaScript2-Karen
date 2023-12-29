@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Home page for Food is Love. People sharing delicious recipes" />
+    <script
+      src="https://kit.fontawesome.com/ad1493ca4b.js"
+      crossorigin="anonymous"></script>
+    <title>Post Page | Food is Love</title>
+    <link rel="stylesheet" href="/dist/css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"></script>
+    <script
+      src="/src/js/templates/userPostsEdit.mjs"
+      defer
+      type="module"></script>
+    <script
+      src="/src/js/api/profile/profileCard.mjs"
+      defer
+      type="module"></script>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body"
+        data-bs-theme="dark">
+        <section id="nav-container" class="container">
+          <section id="logo" class="col-1">
+            <a href="/index.html">
+              <img src="/images/logo.png" class="logo logo-nav" />
+            </a>
+          </section>
+          <section id="user-icon" class="col-1 text-center text-light">
+            <a class="user-icon-link">
+              <i
+                class="fa-sharp fa-solid fa-user text-light fs-2 user-icon"></i>
+            </a>
+          </section>
+        </section>
+      </nav>
+    </header>
+    <main class="flex-grow-1">
+      <section id="feed-container" class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <section id="posts-container" class="col-md-6">
+              <div id="postUser"></div>
+            </section>
+            <div class="deletePostContainer"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

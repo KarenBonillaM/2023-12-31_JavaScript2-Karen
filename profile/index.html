@@ -26,6 +26,10 @@
       src="/src/js/templates/userPostsProfile.mjs"
       defer
       type="module"></script>
+    <script
+      src="/src/js/api/profile/updateAvatar.mjs"
+      defer
+      type="module"></script>
   </head>
   <body>
     <header>
@@ -107,11 +111,29 @@
             <div>
               <div
                 id="name-user-container"
-                class="col-md-3 bg-primary my-2 mx-auto text-light py-2 card px-0">
-                <!-- <h1 class="profile-name">Margarita</h1> -->
-              </div>
-              <button class="btn btn-primary">Follow</button>
+                class="col-md-3 bg-primary my-2 mx-auto text-light py-2 card px-0"></div>
+              <button class="btn btn-primary btn-update-avatar">
+                Update Avatar
+              </button>
             </div>
+            <section id="update-avatar-container">
+              <span class="delete-icon">&times;</span>
+              <div class="popup-avatar">
+                <img class="update-avatar-img" alt="user avatar" />
+              </div>
+              <form class="form-update-avatar">
+                <label for="avatar">Edit your Avatar</label>
+                <input
+                  type="url"
+                  name="avatar"
+                  class="form-control"
+                  placeholder="url"
+                  id="avatar-update" />
+                <button type="submit" class="btn btn-primary">
+                  Update Avatar
+                </button>
+              </form>
+            </section>
           </section>
           <section id="profile-page-body" class="row px-0 mx-0">
             <section id="contacts" class="col my-4 me-2">
@@ -122,21 +144,21 @@
                 <div class="col d-flex justify-content-around pt-4">
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user1.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user2.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Staffan</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user3.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Ana</p>
@@ -145,21 +167,21 @@
                 <div class="col d-flex justify-content-around pt-4">
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user4.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Per</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user5.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Aba</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user6.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Leo</p>
@@ -168,27 +190,28 @@
                 <div class="col d-flex justify-content-around pt-4">
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user7.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user1.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user2.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                 </div>
               </section>
+              -->
               <section
                 id="following"
                 class="row my-4 py-4 border card-follow card">
@@ -196,21 +219,21 @@
                 <div class="col d-flex justify-content-around pt-4">
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user1.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user2.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Staffan</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user3.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Ana</p>
@@ -219,21 +242,21 @@
                 <div class="col d-flex justify-content-around pt-4">
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user4.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Per</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user5.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Aba</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user6.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Leo</p>
@@ -242,21 +265,21 @@
                 <div class="col d-flex justify-content-around pt-4">
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user7.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user1.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>
                   </a>
                   <a href="#" class="text-decoration-none text-dark"
                     ><img
-                      src="/images/user2.jpg"
+                      src="/images/profile-picture.jpg"
                       alt="#"
                       class="img-fluid post-img" />
                     <p>Michael</p>

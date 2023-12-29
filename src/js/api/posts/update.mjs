@@ -6,16 +6,23 @@ const action = "/posts";
 const method = "put";
 
 export async function updatePost(postData) {
-  if(!postData.id) {
-    throw new Error ("Update requires a postID");
+
+  try {
+    if(!postData.id) {
+      throw new Error ("Update requires a postID");
+    }
+  
+    const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
+  
+    const response = await authFetch(updatePostURL, {
+      method,
+      body: JSON.stringify(postData)
+    })
+  
+    alert("Post has been updated")
+    return await response.json()
+  } catch {
+    error("Error when updating post")
   }
-
-  const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
-
-  const response = await authFetch(updatePostURL, {
-    method,
-    body: JSON.stringify(postData)
-  })
-
-  return await response.json()
+  
 } 
